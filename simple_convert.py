@@ -48,9 +48,9 @@ if not file_format:
 # Convert the images
 for img in imgs:
     try:
-        webp_filename = img.filename
-        new_filename = f"{webp_filename.split('.')[0]}.{file_format}"
-        print(f"Converting {webp_filename} to {new_filename}...", end=" ")
+        img_filename = img.filename
+        new_filename = f"{img_filename.split('.')[0]}.{file_format}"
+        print(f"Converting {img_filename} to {new_filename}...", end=" ")
         img.save(new_filename)
         print("Done!")
     # For some reason image format errors are OSErrors
